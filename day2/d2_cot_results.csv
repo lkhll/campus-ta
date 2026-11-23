@@ -1,0 +1,125 @@
+﻿题,模式,tokens,秒,回答,思考
+1,直接,129,1.51,"好的，我们先一步一步来算。  
+
+**第一步：算出女生人数**  
+班级总人数是 40 人，女生占 60%。  
+女生人数 = 40 × 60% = 40 × 0.6 = 24 人。  
+
+**第二步：算戴眼镜的女生人数**  
+女生中有 25% 戴眼镜。  
+戴眼镜的女生 = 24 × 25% = 24 × 0.25 = 6 人。  
+
+**最终答案**：  
+\[
+\boxed{6}
+\]  
+
+所以戴眼镜的女生有 6 人。",
+1,显式CoT,97,0.99,"好的，我们一步一步来推理。  
+
+1. 班级总人数是 40 人。  
+2. 女生占 60%，所以女生人数 = 40 × 60% = 40 × 0.6 = 24 人。  
+3. 女生里戴眼镜的比例是 25%，所以戴眼镜的女生人数 = 24 × 25% = 24 × 0.25 = 6 人。  
+
+答案：6",
+1,思考模式,85,1.02,"女生人数：\(40 \times 60\% = 24\) 人  
+戴眼镜的女生：\(24 \times 25\% = 6\) 人  
+
+**答：戴眼镜的女生有 6 人。**",We need answer Chinese. Need compute 40*60%=24 girls. 25% wear glasses = 6. Need perhaps concise. Ensure not trick. Answer.
+2,直接,247,2.59,"好的，我们先一步一步来推算。  
+
+**第一步：确定今天的信息**  
+今天是 2026 年 11 月 18 日，星期三。  
+
+**第二步：星期的循环规律**  
+一个星期有 7 天，所以每过 7 天，星期会重复。  
+因此，要知道第 100 天是星期几，可以先计算 100 天中有多少个完整的星期，以及余下的天数。  
+
+100 ÷ 7 = 14 周 余 2 天。  
+
+**第三步：推算余数对应的星期**  
+从星期三开始，过 14 周后仍然是星期三，然后再加 2 天：  
+- 星期三 + 1 天 = 星期四  
+- 星期四 + 1 天 = 星期五  
+
+所以第 100 天是 **星期五**。  
+
+**第四步：检查是否包含今天**  
+题目说“从今天算起第 100 天”，通常是指今天之后的第 100 天（即明天是第 1 天）。我们上面的计算就是按这个理解来的，所以结果正确。  
+
+**最终答案：**  
+\[
+\boxed{星期五}
+\]",
+2,显式CoT,190,2.67,"好的，我们一步一步来推理。  
+
+**第一步：确定今天的信息**  
+今天是 2026 年 11 月 18 日，星期三。  
+
+**第二步：计算100天后是星期几**  
+一周有7天，所以我们可以用100除以7看余数：  
+100 ÷ 7 = 14 周 余 2 天。  
+
+这意味着，100天后，星期数会往后推2天。  
+
+**第三步：推算星期几**  
+今天是星期三，往后推2天：  
+- 推1天 → 星期四  
+- 推2天 → 星期五  
+
+所以第100天是星期五。  
+
+**第四步：检查是否有跨年或闰年影响**  
+这里我们只关心星期几，星期的循环不受月份、年份、闰年影响，只要天数余数正确即可。因此无需额外调整。  
+
+答案：星期五  
+
+**答案：星期五**",
+2,思考模式,874,5.36,"把今天（2026年11月18日，星期三）算作第1天，则第100天是往后推 \(100-1=99\) 天。
+
+\(99 \div 7 = 14\) 余 \(1\)，所以星期三往后推1天是**星期四**。
+
+答案：**星期四**（即2027年2月25日）。","We need answer Chinese. Need compute. Today 2026 Nov 18 Wednesday. From today算起第100天 ambiguity: ""从今天算起第100天"" often if today is day 1? Need determine. Chinese phrase ""从今天算起第100天"" = counting today as first day? Could mean 100 days from today (add 100?) Need be careful. They mention today date weekday. Need answer weekday.
+
+Let's compute both interpretations.
+
+2026 Nov 18 Wed. Day-of-year? 2026 non-leap. Nov 18 day of year: Jan31+Feb28=59, Mar31=90, Apr30=120, May31=151, Jun30=181, Jul31=212, Aug31=243, Sep30=273, Oct31=304, +18 =322. Remaining end year 365-322=43 days to Dec31? If Nov18 day 322; Dec31 day365; difference 43. 100 days later difference.
+
+Interpret add 100 days: 100 mod7=2, so Wed+2=Fri. Date 2027 Feb26? Let's compute: Nov18 +100. Days after Nov18 to Nov30: 12? If add days: Nov19 day1... Nov30 day12, Dec31 day43, Jan31 day74, Feb? 100-74=26 => Feb26. So Friday. Feb26 2027 maybe Friday.
+
+Interpret counting today as first: ""第100天"" inclusive gives 99 days after today: 99 mod7=1, Thursday. Which is expected in Chinese? Let's parse: ""从今天算起第100天"" literally counted from today, the 100th day. Usually ""从今天起第1天是今天"", so第100天 = add 99 days. For example ""从今天算起第100天"" often is inclusive. But also ""从今天算起100天后"" is exclusive; ""第100天"" inclusive. Need answer likely Thursday. Need explain counting today as第1天. Let's examine date: Today is 2026年11月18日 Wednesday. 从今天算起第100天: If counting today as day 1, then 99 days later. 99÷7=14余1, Wednesday+1=Thursday. Date? add 99 days = Feb25 2027? Let's compute: add 99: Nov18 +99. From Nov18 to Feb25? Nov remaining after 18: Nov19 day1... Nov30 day12; Dec31 day43; Jan31 day74; Feb25 day? Feb1 day75? Let's calculate: day74 = Jan31? Wait add 74 from Nov18: difference date. Let's use ordinal. Nov18 day322. Add 99 => day421 of year? 2026 has365; day421-365=56th day 2027. Feb25 day: Jan31 +25=56. Yes Feb25 2027 Thursday. If add100 gives Feb26 Friday.
+
+Need answer perhaps mention if ""100天后"" not ""第100天"". The question wording ""从今天算起第100天"" strongly inclusive. In Chinese math calendar, ""从今天算起第100天"" indeed count today. Need maybe clarify.
+
+Let's craft concise: 把今天（11月18日）算作第1天，则第100天相当于往后推99天。99÷7=14余1，星期三后一天是星期四。答：星期四（2027年2月25日）。 If按“今天之后第100天”则星期五, but under题 wording第100天是Thu. Maybe include parenthetical to avoid ambiguity. Desired oververbosity 5, not too long.
+
+Need final. 
+"
+3,直接,122,1.27,"好的，我们先一步一步梳理题目里的信息。  
+
+题目说：  
+1. 小明比小红高 → 小明 > 小红（身高）  
+2. 小红比小刚高 → 小红 > 小刚  
+3. 小刚比小丽高 → 小刚 > 小丽  
+
+把这些关系连起来就是：  
+小明 > 小红 > 小刚 > 小丽  
+
+所以最矮的是排在最后的——小丽。  
+
+**答案**：小丽最矮。  
+
+如果你想，我还可以帮你画一个简单的高度排序图，这样更直观。",
+3,显式CoT,96,0.73,"好的，我们先一步步推理：  
+
+1. 题目说“小明比小红高”，说明小明 > 小红（身高）。  
+2. “小红比小刚高”，说明小红 > 小刚。  
+3. “小刚比小丽高”，说明小刚 > 小丽。  
+
+把这三个关系连起来：  
+小明 > 小红 > 小刚 > 小丽。  
+
+所以最矮的是小丽。  
+
+答案：小丽",
+3,思考模式,47,1.09,小丽最矮。,"We need answer Chinese. Need reason simple. Order: 小明>小红>小刚>小丽 height. Shortest = 小丽. Need be careful ""比...高"". answer concise."

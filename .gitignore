@@ -1,0 +1,5 @@
+.venv/
+campus-ta/.venv/
+__pycache__/
+.env
+day2/.env
