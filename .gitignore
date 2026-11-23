@@ -1,5 +1,8 @@
 .venv/
 campus-ta/.venv/
 __pycache__/
+*.pyc
 .env
 day2/.env
+.idea/
+.vscode/
